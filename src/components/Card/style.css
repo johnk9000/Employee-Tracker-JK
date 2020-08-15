@@ -1,0 +1,54 @@
+li {
+    list-style: none outside none;
+    padding: auto;
+    margin-left: -20px !important;
+}
+
+img {
+    margin: auto 15px;
+    width: 100px;
+}
+
+.container {
+    padding: none;
+    margin: none;
+}
+
+.card {
+    color: #333;
+    display: flex;
+    height: 240px;
+    width: 240px;
+    font-size: 16px;
+    flex-direction: column;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 15px 1px black;
+}
+
+.card-collection {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: linear-gradient(#666, #333);
+    min-height: 420px;
+    min-width: 640px;
+    padding: 40px;
+    width: 100%;
+}
+
+.Kate > img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: -20px;
+}
+
+.John > img {
+    height: 100px;
+}
