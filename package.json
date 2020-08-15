@@ -14,10 +14,12 @@
     "react-reducer": "^1.0.0-beta.1",
     "react-ref": "0.0.1",
     "react-scripts": "3.4.3",
-    "react-state": "^2.2.2"
+    "react-state": "^2.2.2",
+    "express": "4.17.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "watch": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
