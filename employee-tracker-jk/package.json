@@ -8,8 +8,13 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-components": "^0.5.1",
+    "react-dispatch": "^1.2.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-effect": "^2.0.0",
+    "react-reducer": "^1.0.0-beta.1",
+    "react-ref": "0.0.1",
+    "react-scripts": "3.4.3",
+    "react-state": "^2.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

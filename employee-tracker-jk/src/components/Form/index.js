@@ -1,35 +1,80 @@
-import React from "react"
+import React, { useReducer, useRef, useState, useEffect } from "react";
+import FormContext from "../FormContext"
 import "./style.css";
 
-function Form() {
-return (
-    <div className="container text-center">
-      <h1>Create a Todo List!</h1>
-      <form className="form-group mt-5" onSubmit={handleSubmit}>
-        <input
-          className="form-control"
-          ref={inputRef}
-          placeholder="Start typing what you need to do..."
-        />
-        <button className="btn btn-success mt-3 mb-5" type="submit">
-          Add to List
-        </button>
-      </form>
-      <h4>My Todo List:</h4>
-      <ul className="list-group">
-        {items.map((item, index) => (
-          <li className="list-group-item" key={item.id}>
-            {item.name}{" "}
-                <button
-                className="btn btn-danger ml-5"
-                onClick={() => dispatch({ type: "remove", index })}
-                >
-                X Remove
-                </button>
-            </li>
-            ))}
-        </ul>
+function Form(props) {
+    const inputRef = useRef();
+    const [formToggle, setFormToggle] = useState(false);
+    //const [employees, setEmployees] = useState([]);
+    const [employees, dispatch] = useReducer((state, action) => {
+        switch (action.type) {
+        case "add":
+        return [
+            ...state,
+            {
+                id: state.length * Math.random(),
+                name: action.name,
+                role: action.role,
+                image: action.image
+            }
+            ];
+        case "remove":
+            return state.filter((_, index) => {
+            return index !== action.index;
+            });
+        default:
+            return state;
+        }
+    }, [])
+
+  const handleInputChange = e => {
+    e.preventDefault();
+    dispatch({
+        type: "add",
+        name: inputRef.current.value,
+    })
+    }
+
+   const handleToggle = e => {
+    e.preventDefault();
+        let formGroup = document.querySelector(".form-group")
+        if (formToggle) {
+        formGroup.classList.remove("hide")
+          setFormToggle(false)
+        } else {
+            formGroup.classList.add("hide")
+          setFormToggle(true)
+        }
+      } 
+
+    return (
+<div className="form-cont">     
+    <div>
+        <button className="toggle" onClick={handleToggle}> + </button>
     </div>
+    <div className="form-group hide">
+        <form className="form" onSubmit={handleInputChange}>
+            <input
+                name="name"
+                type="text"
+                placeholder="Name"
+            />
+            <input
+                name="role"
+                type="text"
+                placeholder="Role"
+            />
+            <input
+                name="image"
+                type="url"
+                placeholder="Github User"
+            />
+            <br></br>
+            <button onClick={handleInputChange}>Submit</button>
+    </form>
+    </div>
+</div>
     )
 }
+
 export default Form

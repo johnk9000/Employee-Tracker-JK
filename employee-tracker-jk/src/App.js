@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useReducer, useRef, useState, useEffect } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Card from './components/Card'
 import Wrapper from './components/Wrapper'
-//import Form from './components/Form'
-
+import Form from './components/Form'
+import FormContext from './components/FormContext'
 const employees = [
   {
     id: 1,
@@ -25,6 +25,7 @@ function App() {
     <Wrapper>
       <Header/>
       <Card employees={employees}/>
+      <Form/>
     </Wrapper>
   )
 }
