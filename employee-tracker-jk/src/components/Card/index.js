@@ -22,6 +22,7 @@ function Card(props) {
         image: "https://cdn5.vectorstock.com/i/1000x1000/56/04/great-white-shark-black-concept-icon-great-vector-23245604.jpg"    
       }
     ]
+        //const [employees, setEmployees] = useState([]);
     const [employees, dispatch] = useReducer((state, action) => { 
         switch (action.type) {
         case 'add':
@@ -31,7 +32,7 @@ function Card(props) {
               return [
                   ...state,
             {
-                id: Math.random() * employees.length,
+                id: Math.random(),
                 name: action.name,
                 person: personIn.value,
                 role: roleIn.value,
