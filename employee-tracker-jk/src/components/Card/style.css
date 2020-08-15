@@ -27,6 +27,7 @@ img {
     margin: 20px;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 15px 1px black;
 }
 
 .card-collection {
@@ -34,9 +35,20 @@ img {
     flex: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: #333;
-    min-height: 640px;
-    min-width: 840px;
+    background: linear-gradient(#666, #333);
+    min-height: 420px;
+    min-width: 640px;
     padding: 40px;
     width: 100%;
+}
+
+.Kate > img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    margin-bottom: -20px;
+}
+
+.John > img {
+    height: 100px;
 }
