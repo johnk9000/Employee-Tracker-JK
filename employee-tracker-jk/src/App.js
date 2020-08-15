@@ -5,6 +5,7 @@ import Card from './components/Card'
 import Wrapper from './components/Wrapper'
 import Form from './components/Form'
 import FormContext from './components/FormContext'
+
 const employees = [
   {
     id: 1,
@@ -24,8 +25,7 @@ function App() {
   return (
     <Wrapper>
       <Header/>
-      <Card employees={employees}/>
-      <Form/>
+      <Card/>
     </Wrapper>
   )
 }

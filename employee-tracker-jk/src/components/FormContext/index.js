@@ -4,7 +4,7 @@ const UserContext = React.createContext({
   name: "",
   role: "",
   image: "",
-  handleBtnClick: () => {}
+  handleInputChange: () => {}
 });
 
 export default UserContext;
