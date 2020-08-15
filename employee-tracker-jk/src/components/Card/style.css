@@ -9,6 +9,11 @@ img {
     width: 100px;
 }
 
+.container {
+    padding: none;
+    margin: none;
+}
+
 .card {
     color: #333;
     display: flex;
@@ -31,6 +36,7 @@ img {
     justify-content: space-around;
     background: #333;
     min-height: 640px;
+    min-width: 840px;
     padding: 40px;
     width: 100%;
 }
