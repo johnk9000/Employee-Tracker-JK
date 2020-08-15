@@ -1,0 +1,39 @@
+{
+    "name": "employee-tracker",
+    "version": "1.2.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "lite-server": "lite-server",
+      "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+    },
+    "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+    "dependencies": {
+      "compression": "^1.7.4",
+      "express": "^4.17.1",
+      "lite-server": "^2.5.3",
+      "morgan": "^1.9.1",
+      "react": "^16.13.1",
+      "react-components": "^0.5.1",
+      "react-dispatch": "^1.2.0",
+      "react-dom": "^16.13.1",
+      "react-effect": "^2.0.0",
+      "react-reducer": "^1.0.0-beta.1",
+      "react-ref": "0.0.1",
+      "react-scripts": "3.4.3",
+      "react-state": "^2.2.2"
+    }
+  }
+  
