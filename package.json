@@ -5,10 +5,6 @@
     "main": "server.js",
     "scripts": {
       "start": "node server.js",
-      "lite-server": "lite-server",
-      "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
     },
     "engines": {
         "node": "12.x"
@@ -24,6 +20,7 @@
     },
     "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
     "dependencies": {
+      "node": "v12.18.3",
       "compression": "^1.7.4",
       "express": "^4.17.1",
       "lite-server": "^2.5.3",
