@@ -1,5 +1,5 @@
 
-# HW8: Team Profile Card Generator 
+# Team Profile Card Generator 
 
 ### Table of Contents
   * [Description](#description)
